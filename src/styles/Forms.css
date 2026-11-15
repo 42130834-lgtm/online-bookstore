@@ -1,0 +1,33 @@
+.form-card,
+.info-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.form-card h2,
+.info-card h2 { font-size: 1.4rem; margin-bottom: 18px; }
+
+.form-card .alert-success { margin: 0 0 20px; }
+
+/* Red border + message when a field is wrong */
+.field .invalid { border-color: var(--red); }
+.error { color: var(--red); font-size: 0.85rem; margin-top: 4px; }
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.info-card { background: var(--navy); color: #dbe3f5; border: 0; }
+.info-card h2 { color: #fff; }
+.info-card p { margin: 0 0 12px; }
+.info-card strong { color: #fff; }
+
+@media (max-width: 860px) {
+  .contact-layout { grid-template-columns: 1fr; }
+}

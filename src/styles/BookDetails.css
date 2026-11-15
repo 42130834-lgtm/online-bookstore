@@ -1,0 +1,48 @@
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.breadcrumb a { text-decoration: none; font-weight: 500; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb .current { color: var(--ink); }
+
+.details {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.details-info h1 { font-size: 2.6rem; margin: 10px 0 6px; }
+.details-author { color: var(--muted); margin: 0 0 16px; }
+.details-price { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: var(--amber); margin: 0 0 16px; }
+.details-text { font-size: 1.1rem; max-width: 600px; }
+
+.buy-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 14px;
+  margin-top: 28px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.qty-label { display: block; font-weight: 600; font-size: 0.9rem; color: var(--navy); margin-bottom: 6px; }
+.buy-box .qty button,
+.buy-box .qty span { height: 46px; }
+.buy-box .qty span { line-height: 46px; }
+
+.related { margin-top: 64px; }
+.related h2 { font-size: 1.7rem; margin-bottom: 20px; }
+
+@media (max-width: 800px) {
+  .details { grid-template-columns: 1fr; gap: 28px; }
+  .details-cover { max-width: 260px; margin: 0 auto; }
+  .details-info h1 { font-size: 2rem; }
+}

@@ -1,0 +1,40 @@
+.book-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.book-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+.book-card-cover { display: block; text-decoration: none; }
+
+.book-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 14px 16px 16px;
+}
+.book-card-body .badge { align-self: flex-start; margin-bottom: 8px; }
+
+.book-card-title { font-size: 1.05rem; margin-bottom: 2px; }
+.book-card-title a { color: var(--navy); text-decoration: none; }
+.book-card-title a:hover { color: var(--amber); }
+
+.book-card-author { margin: 0 0 14px; font-size: 0.85rem; color: var(--muted); }
+
+.book-card-bottom {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 600px) {
+  .book-card-body { padding: 10px 12px 12px; }
+  .book-card-bottom { flex-direction: column; align-items: stretch; }
+}

@@ -1,0 +1,95 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--navy);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+.logo-text span { color: #fbbf24; }
+.logo .logo-icon { font-size: 1.4rem; }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-links a {
+  color: #dbe3f5;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.nav-links a:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
+
+.nav-links .cart-link {
+  margin-left: 10px;
+  background: var(--amber);
+  color: #fff;
+  font-weight: 600;
+}
+.nav-links .cart-link:hover { background: var(--amber-dark); }
+
+.cart-count {
+  display: inline-block;
+  min-width: 22px;
+  margin-left: 4px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--amber-dark);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* Hamburger button: only on small screens */
+.menu-btn {
+  display: none;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.3rem;
+  width: 44px;
+  height: 40px;
+  cursor: pointer;
+}
+
+@media (max-width: 860px) {
+  .menu-btn { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 20px 20px;
+    background: var(--navy);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-links.open { display: flex; }
+  .nav-links .cart-link { margin: 8px 0 0; text-align: center; }
+}
