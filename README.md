@@ -93,4 +93,4 @@ vite.config.js          Vite settings (base path for GitHub Pages)
 
 ## Author
 
-[Your name] – Lebanese International University – CSCI426
+Lara Faour – Lebanese International University – CSCI426
